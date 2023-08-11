@@ -25,7 +25,7 @@ node {
 
             The Build Number ${BUILD_NUMBER} is Failed. Please look into that.
 
-            Thanks,''', subject: 'The jenkis Job ${JOB_NAME} is Failed ', to: 'niladrimondal.mondal@gmail.com'
+            Thanks,''', subject: 'The jenkis Job ${JOB_NAME} is Failed ', to: 'rahulpatna89@gmail.com'
         }
     }
     stage('Build the application'){
