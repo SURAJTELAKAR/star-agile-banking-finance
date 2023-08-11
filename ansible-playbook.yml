@@ -21,4 +21,4 @@
     command: docker rm financeme
 
   - name: Deploy Docker Container
-    command: docker run --name financeme -itd -p 8084:8081 rahul9711/finance_me:1.0
+    command: docker run --name financeme -itd -p 8084:8081 surajtelakar/finance_me:1.0
