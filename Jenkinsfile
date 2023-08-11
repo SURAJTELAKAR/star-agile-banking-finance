@@ -34,7 +34,7 @@ node {
         sh "${mavenCMD} clean package"
     }
     stage('publish html reports'){
-        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/FinanceMe_Pipeline/target/surefire-reports', reportFiles: 'html-report.html', reportName: 'HTML Report', reportTitles: 'HTML-Report', useWrapperFileDirectly: true])
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/FinanceMe_Pipeline/target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'HTML-Report', useWrapperFileDirectly: true])
     }
     stage('Build the DockerImage of the application'){
         try{
