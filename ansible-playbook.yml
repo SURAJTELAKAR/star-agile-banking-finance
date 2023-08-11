@@ -17,8 +17,8 @@
       #name: rahul9711/finance_me:1.0
       #state: stopped
 
-  - name: Remove Existing  Container
-    command: sudo docker rm $(docker ps -aq)
+  #- name: Remove Existing  Container
+    #command: sudo docker rm $(docker ps -aq)
 
   - name: Deploy Docker Container
     command: sudo docker run -itd -p 8084:8081 rahul9711/finance_me:1.0
