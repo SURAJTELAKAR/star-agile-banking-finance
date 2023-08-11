@@ -16,7 +16,7 @@ node {
     stage ('code checkout'){
         try{
         echo 'pulling the code from github repo'
-        git 'https://github.com/rahulk8/star-agile-banking-finance.git'
+        git 'https://github.com/SURAJTELAKAR/star-agile-banking-finance.git'
         }
         catch(Exception e){
             echo 'Exception Occur'
@@ -25,7 +25,7 @@ node {
 
             The Build Number ${BUILD_NUMBER} is Failed. Please look into that.
 
-            Thanks,''', subject: 'The jenkis Job ${JOB_NAME} is Failed ', to: 'rahulpatna89@gmail.com'
+            Thanks,''', subject: 'The jenkis Job ${JOB_NAME} is Failed ', to: 'surajtelakar10@gmail.com'
         }
     }
     stage('Build the application'){
@@ -44,7 +44,7 @@ node {
         //restart Jenkins
         //or add sudoers file below line
         //jenkins ALL=(ALL) NOPASSWD:ALL
-        sh "${dockerCMD} build -t rahul9711/finance_me:${tagName} ."
+        sh "${dockerCMD} build -t surajtelakar/finance_me:${tagName} ."
         
         }
         catch(Exception e){
@@ -54,7 +54,7 @@ node {
 
             The Build Number ${BUILD_NUMBER} is Failed. Please look into that.
 
-            Thanks,''', subject: 'The jenkis Job ${JOB_NAME} is Failed ', to: 'rahulpatna89@gmail.com'
+            Thanks,''', subject: 'The jenkis Job ${JOB_NAME} is Failed ', to: 'surajtelakar10@gmail.com'
             
         }
     }
@@ -62,8 +62,8 @@ node {
         echo 'pushing docker image'
         withCredentials([string(credentialsId: 'DockerPassword', variable: 'dockerpassword')]) {
         // some block
-        sh "${dockerCMD} login -u rahul9711 -p ${dockerpassword}"
-        sh "${dockerCMD} push rahul9711/finance_me:${tagName}"
+        sh "${dockerCMD} login -u surajtelakar -p ${dockerpassword}"
+        sh "${dockerCMD} push surajtelakar/finance_me:${tagName}"
         }
     }
     stage('deploy the application'){
