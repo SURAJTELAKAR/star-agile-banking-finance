@@ -63,7 +63,7 @@ node {
         withCredentials([string(credentialsId: 'DockerPassword', variable: 'dockerpassword')]) {
         // some block
         sh "${dockerCMD} login -u rahul9711 -p ${dockerpassword}"
-        sh "${dockerCMD} push rahul9711/finance-me:${tagName}"
+        sh "${dockerCMD} push rahul9711/finance_me:${tagName}"
         }
     }
     stage('deploy the application'){
