@@ -13,7 +13,7 @@
     command : sudo systemctl start docker
 
   - name: Remove already running Docker container
-    command: sudo apt remove finance_me
+    command: sudo docker rm finance_me
 
   - name: Deploy Docker Container
     command: docker run -itd -p 8084:8081 rahul9711/finance_me:1.0
