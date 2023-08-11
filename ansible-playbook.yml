@@ -12,13 +12,7 @@
   - name : Start Docker Service
     command : sudo systemctl start docker
 
-  - name: Stop the http_server1 container
-    docker_container:
-      name: rahul9711/finance_me:1.0
-      state: stopped
-
-  - name: Remove Existing  Container
-    command: docker rm rahul9711/finance_me:1.0
+  
 
   - name: Deploy Docker Container
     command: docker run -itd -p 8084:8081 rahul9711/finance_me:1.0
