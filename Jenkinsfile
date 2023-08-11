@@ -62,7 +62,7 @@ node {
         echo 'pushing docker image'
         withCredentials([string(credentialsId: 'DockerPassword', variable: 'dockerpassword')]) {
         // some block
-        sh "${dockerCMD} login -u niladrimondaldcr -p ${dockerpassword}"
+        sh "${dockerCMD} login -u rahul9711 -p ${dockerpassword}"
         sh "${dockerCMD} push rahul9711/finance-me:${tagName}"
         }
     }
