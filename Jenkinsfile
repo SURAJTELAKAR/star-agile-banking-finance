@@ -44,7 +44,7 @@ node {
         //restart Jenkins
         //or add sudoers file below line
         //jenkins ALL=(ALL) NOPASSWD:ALL
-        sh "${dockerCMD} build -t rahul9711/finance-me:${tagName} ."
+        sh "${dockerCMD} build -t rahul9711/finance_me:${tagName} ."
         
         }
         catch(Exception e){
