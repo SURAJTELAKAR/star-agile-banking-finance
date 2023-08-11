@@ -17,7 +17,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-  public class insureMe{
+  public class TestNGScreenshot{
       @Test
       public static void main(String[] args) throws InterruptedException, IOException {
        WebDriverManager.chromedriver().setup();
